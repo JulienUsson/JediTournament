@@ -36,6 +36,11 @@ namespace BusinessLayer
             DalManager.Instance.AddJedi(jedi);
         }
 
+        public void UpdateJedi(Jedi jedi)
+        {
+            DalManager.Instance.UpdateJedi(jedi);
+        }
+
         public void DelJedi(Jedi jedi)
         {
             DalManager.Instance.DeleteJedi(jedi);

@@ -7,11 +7,10 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using WebService.Adapter;
+using WebService.Contract;
 
 namespace WebService
 {
-    // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom de classe "Service1" dans le code, le fichier svc et le fichier de configuration.
-    // REMARQUE : pour lancer le client test WCF afin de tester ce service, sélectionnez Service1.svc ou Service1.svc.cs dans l'Explorateur de solutions et démarrez le débogage.
     public class JediService : IJediService
     {
         private JediTournamentManager jtm;
@@ -19,6 +18,18 @@ namespace WebService
         public JediService()
         {
             jtm = new JediTournamentManager();
+        }
+
+        public JediContract AddJedis(JediContract j)
+        {
+            JediContract jedi = new JediContract();
+            jtm.AddJedi(JediAdapter.JediContractToJedi(j));
+            return jedi;
+        }
+
+        public bool DelJedis(JediContract jedi)
+        {
+            throw new NotImplementedException();
         }
 
         public List<JediContract> GetJedis()
@@ -29,6 +40,11 @@ namespace WebService
                 jedis.Add(JediAdapter.JediToJediContract(j));
             }
             return jedis;
+        }
+
+        public JediContract UpdateJedis(JediContract jedi)
+        {
+            throw new NotImplementedException();
         }
     }
 }

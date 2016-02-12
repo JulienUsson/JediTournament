@@ -5,25 +5,23 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using WebService.Contract;
 
 namespace WebService
 {
-    // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom d'interface "IService1" à la fois dans le code et le fichier de configuration.
     [ServiceContract]
     public interface IJediService
     {
         [OperationContract]
         List<JediContract> GetJedis();
-    }
 
+        [OperationContract]
+        JediContract AddJedis(JediContract jedi);
 
-    [DataContract]
-    public class JediContract
-    {
-        [DataMember]
-        public bool IsSith { get; set; }
+        [OperationContract]
+        JediContract UpdateJedis(JediContract jedi);
 
-        [DataMember]
-        public string Nom { get; set; }
+        [OperationContract]
+        bool DelJedis(JediContract jedi);
     }
 }
