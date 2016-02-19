@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JediUnitTest", "JediUnitTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{C16CC786-CE25-4110-98CE-813B6FD1DC7C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{81DC5753-9C82-4237-98D7-907680DDF637}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{C16CC786-CE25-4110-98CE-813B6FD1DC7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C16CC786-CE25-4110-98CE-813B6FD1DC7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C16CC786-CE25-4110-98CE-813B6FD1DC7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81DC5753-9C82-4237-98D7-907680DDF637}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81DC5753-9C82-4237-98D7-907680DDF637}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81DC5753-9C82-4237-98D7-907680DDF637}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81DC5753-9C82-4237-98D7-907680DDF637}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
