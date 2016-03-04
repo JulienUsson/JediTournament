@@ -39,7 +39,7 @@
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container-fluid body-content">
         @RenderBody()
         <hr />
         <footer>
@@ -49,6 +49,12 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src="/Scripts/particles.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        particlesJS.load('particles-js', '/JSON/particles.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

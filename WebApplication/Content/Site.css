@@ -1,12 +1,9 @@
 ﻿body {
-    padding-top: 50px;
     padding-bottom: 20px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,4 +18,32 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+.hero .panel {
+    background: none;
+    color: #FFFF00;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    margin: -50px 0 0 -150px;
+}
+
+.row {
+    margin: auto;
+    width: 90%;
+    max-width: 950px;
+}
+
+footer {
+    text-align: center;
 }
