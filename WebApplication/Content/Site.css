@@ -1,9 +1,18 @@
-﻿#background {
+﻿@font-face {
+    font-family: distantGalaxy;
+    src: url(../fonts/DistantGalaxy.ttf);
+}
+
+#background {
     position: fixed;
     height: 100%;
     width: 100%;
     background-color: black;
     z-index: -50;
+}
+
+h1, h2, h3, .header, .navbar-brand, footer {
+    font-family: distantGalaxy;
 }
 
 body {
