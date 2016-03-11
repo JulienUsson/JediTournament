@@ -15,6 +15,10 @@ namespace JediTournamentEntities
         {
         }
 
+        public Tournoi()
+        {
+        }
+
         public Tournoi(int id, string nom, List<Match> matchs)
             : base(id)
         {

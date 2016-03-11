@@ -19,9 +19,9 @@ namespace WebService
         JediContract AddJedis(JediContract jedi);
 
         [OperationContract]
-        JediContract UpdateJedis(JediContract jedi);
+        void UpdateJedis(JediContract jedi);
 
         [OperationContract]
-        bool DelJedis(JediContract jedi);
+        void DelJedis(JediContract jedi);
     }
 }

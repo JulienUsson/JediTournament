@@ -20,16 +20,15 @@ namespace WebService
             jtm = new JediTournamentManager();
         }
 
-        public JediContract AddJedis(JediContract j)
+        public JediContract AddJedis(JediContract jedi)
         {
-            JediContract jedi = new JediContract();
-            jtm.AddJedi(JediAdapter.JediContractToJedi(j));
+            jtm.AddJedi(JediAdapter.JediContractToJedi(jedi));
             return jedi;
         }
 
-        public bool DelJedis(JediContract jedi)
+        public void DelJedis(JediContract jedi)
         {
-            throw new NotImplementedException();
+            jtm.DelJedi(JediAdapter.JediContractToJedi(jedi));
         }
 
         public List<JediContract> GetJedis()
@@ -42,9 +41,9 @@ namespace WebService
             return jedis;
         }
 
-        public JediContract UpdateJedis(JediContract jedi)
+        public void UpdateJedis(JediContract jedi)
         {
-            throw new NotImplementedException();
+            jtm.UpdateJedi(JediAdapter.JediContractToJedi(jedi));
         }
     }
 }

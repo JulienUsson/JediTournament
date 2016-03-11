@@ -89,20 +89,56 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="JoueurService.svc" />
+    <Content Include="MatchService.svc" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="JediService.svc" />
+    <Content Include="StadeService.svc" />
+    <Content Include="TournoiService.svc" />
+    <Content Include="UtilisateurService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapter\JediAdapter.cs" />
+    <Compile Include="Adapter\JoueurAdapter.cs" />
+    <Compile Include="Adapter\MatchAdapter.cs" />
+    <Compile Include="Adapter\StadeAdapter.cs" />
+    <Compile Include="Adapter\TournoiAdapter.cs" />
+    <Compile Include="Adapter\UtilisateurAdapter.cs" />
     <Compile Include="Contract\EntityContract.cs" />
+    <Compile Include="Contract\EPhaseTournoiContract.cs" />
     <Compile Include="Contract\JediContract.cs" />
+    <Compile Include="Contract\JoueurContract.cs" />
+    <Compile Include="Contract\MatchContract.cs" />
+    <Compile Include="Contract\StadeContract.cs" />
+    <Compile Include="Contract\TournoiContract.cs" />
+    <Compile Include="Contract\UtilisateurContract.cs" />
+    <Compile Include="IJoueurService.cs" />
+    <Compile Include="IMatchService.cs" />
+    <Compile Include="IStadeService.cs" />
+    <Compile Include="ITournoiService.cs" />
+    <Compile Include="IUtilisateurService.cs" />
     <Compile Include="JediService.svc.cs">
       <DependentUpon>JediService.svc</DependentUpon>
     </Compile>
     <Compile Include="IJediService.cs" />
+    <Compile Include="JoueurService.svc.cs">
+      <DependentUpon>JoueurService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="MatchService.svc.cs">
+      <DependentUpon>MatchService.svc</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StadeService.svc.cs">
+      <DependentUpon>StadeService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="TournoiService.svc.cs">
+      <DependentUpon>TournoiService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="UtilisateurService.svc.cs">
+      <DependentUpon>UtilisateurService.svc</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -112,6 +148,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
