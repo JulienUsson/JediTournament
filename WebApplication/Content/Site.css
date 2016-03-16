@@ -1,24 +1,50 @@
-﻿body {
+﻿@font-face {
+    font-family: distantGalaxy;
+    src: url(../fonts/DistantGalaxy.ttf);
+}
+
+#background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: -50;
+}
+
+h1, h2, h3, .header, .navbar-brand, footer {
+    font-family: distantGalaxy;
+}
+
+body {
+    color: yellow;
     padding-top: 50px;
-    padding-bottom: 20px;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.navbar-inverse .navbar-brand {
+    color: yellow;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+.header {
+    padding: 50px 0;
+    text-align:center;
+    vertical-align: middle;
+    font-size: 64px;
+    font-weight: bold;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+.hero .panel {
+    background: none;
+    color: #FFFF00;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    margin: -50px 0 0 -150px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
 }

@@ -148,7 +148,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+<<<<<<< HEAD
     <Content Include="ClassDiagram1.cd" />
+=======
+    <None Include="Properties\PublishProfiles\JediTournamentWebService.pubxml" />
+>>>>>>> 6b94cbe5d64ce4347d2faf69ec4c5357470d04cd
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

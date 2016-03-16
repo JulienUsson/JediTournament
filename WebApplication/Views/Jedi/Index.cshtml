@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Liste des jedis";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <tr>
+        <td>Id</td>
+        <td>Nom</td>
+        <td>Côté de la force</td>
+    </tr>
+    @foreach (var jedi in ViewBag.Jedis)
+    {
+        <tr>
+            <td>@jedi.ID</td>
+            <td>@jedi.Nom</td>
+            @if(jedi.IsSith)
+            {
+                <td>Sith</td>
+            }
+            else
+            {
+                <td>Jedi</td>
+            }
+        </tr>
+    }
+</table>
