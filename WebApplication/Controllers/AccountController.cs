@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using WebApplication.Models;
 using System.Web.Security;
+using WebApplication.WebService;
 
 namespace WebApplication.Controllers
 {
@@ -91,7 +92,19 @@ namespace WebApplication.Controllers
             //        return View(model);
             //}
 
-            FormsAuthentication.SetAuthCookie("test", true);
+            ServiceClient webService = new ServiceClient();
+            var user= new UtilisateurContract() { Login = model.Email, Password = model.Password };
+            if (webService.CheckUtilisateurs(user))
+            {
+                FormsAuthentication.SetAuthCookie(model.Email, true);
+            }
+            else
+            {
+                ModelState.AddModelError("", "Tentative de connexion non valide.");
+                return View(model);
+            }
+            webService.Close();
+            
             return RedirectToLocal(returnUrl);
         }
 

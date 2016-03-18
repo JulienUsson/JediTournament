@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication.WebService;
 
 namespace WebApplication.Controllers
 {
@@ -11,9 +12,9 @@ namespace WebApplication.Controllers
         // GET: Match
         public ActionResult Index()
         {
-            //MatchServiceClient client = new MatchServiceClient();
-            //ViewBag.Matchs = client.GetMatchs();
-            //client.Close();
+            ServiceClient webService = new ServiceClient();
+            ViewBag.Matchs = webService.GetMatchs();
+            webService.Close();
             return View();
         }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication.WebService;
 
 namespace WebApplication.Controllers
 {
@@ -11,9 +12,9 @@ namespace WebApplication.Controllers
         // GET: Stade
         public ActionResult Index()
         {
-            //StadeServiceClient client = new StadeServiceClient();
-            //ViewBag.Stades = client.GetStades();
-            //client.Close();
+            ServiceClient webService = new ServiceClient();
+            ViewBag.Stades = webService.GetStades();
+            webService.Close();
             return View();
         }
 

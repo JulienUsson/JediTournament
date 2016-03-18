@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication.WebService;
 
 namespace WebApplication.Controllers
 {
@@ -11,9 +12,9 @@ namespace WebApplication.Controllers
         // GET: Tournoi
         public ActionResult Index()
         {
-            //TournoiServiceClient client = new TournoiServiceClient();
-            //ViewBag.Tournois = client.GetTournois();
-            //client.Close();
+            ServiceClient webService = new ServiceClient();
+            ViewBag.Tournois = webService.GetTournois();
+            webService.Close();
             return View();
         }
 
