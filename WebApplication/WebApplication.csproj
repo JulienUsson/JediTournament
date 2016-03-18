@@ -250,7 +250,6 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <None Include="Service References\WebService\Service.disco" />
     <None Include="Service References\WebService\configuration91.svcinfo" />
     <None Include="Service References\WebService\configuration.svcinfo" />
     <None Include="Service References\WebService\Reference.svcmap">
@@ -305,6 +304,18 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Service References\WebService\WebApplication.WebService.JediContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WebService\WebApplication.WebService.MatchContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WebService\WebApplication.WebService.StadeContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WebService\WebApplication.WebService.TournoiContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\WebService\WebApplication.WebService.UtilisateurContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
   </ItemGroup>

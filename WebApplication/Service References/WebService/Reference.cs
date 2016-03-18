@@ -56,6 +56,10 @@ namespace WebApplication.WebService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="EntityContract", Namespace="http://schemas.datacontract.org/2004/07/WebService.Contract")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WebApplication.WebService.StadeContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WebApplication.WebService.TournoiContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WebApplication.WebService.MatchContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WebApplication.WebService.UtilisateurContract))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(WebApplication.WebService.JediContract))]
     public partial class EntityContract : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -98,6 +102,227 @@ namespace WebApplication.WebService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="StadeContract", Namespace="http://schemas.datacontract.org/2004/07/WebService.Contract")]
+    [System.SerializableAttribute()]
+    public partial class StadeContract : WebApplication.WebService.EntityContract {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int NbPlacesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PlaneteField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int NbPlaces {
+            get {
+                return this.NbPlacesField;
+            }
+            set {
+                if ((this.NbPlacesField.Equals(value) != true)) {
+                    this.NbPlacesField = value;
+                    this.RaisePropertyChanged("NbPlaces");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Planete {
+            get {
+                return this.PlaneteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PlaneteField, value) != true)) {
+                    this.PlaneteField = value;
+                    this.RaisePropertyChanged("Planete");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TournoiContract", Namespace="http://schemas.datacontract.org/2004/07/WebService.Contract")]
+    [System.SerializableAttribute()]
+    public partial class TournoiContract : WebApplication.WebService.EntityContract {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private WebApplication.WebService.MatchContract[] MatchsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NomField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public WebApplication.WebService.MatchContract[] Matchs {
+            get {
+                return this.MatchsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MatchsField, value) != true)) {
+                    this.MatchsField = value;
+                    this.RaisePropertyChanged("Matchs");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nom {
+            get {
+                return this.NomField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NomField, value) != true)) {
+                    this.NomField = value;
+                    this.RaisePropertyChanged("Nom");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MatchContract", Namespace="http://schemas.datacontract.org/2004/07/WebService.Contract")]
+    [System.SerializableAttribute()]
+    public partial class MatchContract : WebApplication.WebService.EntityContract {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private WebApplication.WebService.JediContract Jedi1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private WebApplication.WebService.JediContract Jedi2Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private WebApplication.WebService.EPhaseTournoiContract PhaseTournoiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private WebApplication.WebService.StadeContract StadeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private WebApplication.WebService.JediContract VainqueurField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public WebApplication.WebService.JediContract Jedi1 {
+            get {
+                return this.Jedi1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Jedi1Field, value) != true)) {
+                    this.Jedi1Field = value;
+                    this.RaisePropertyChanged("Jedi1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public WebApplication.WebService.JediContract Jedi2 {
+            get {
+                return this.Jedi2Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Jedi2Field, value) != true)) {
+                    this.Jedi2Field = value;
+                    this.RaisePropertyChanged("Jedi2");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public WebApplication.WebService.EPhaseTournoiContract PhaseTournoi {
+            get {
+                return this.PhaseTournoiField;
+            }
+            set {
+                if ((this.PhaseTournoiField.Equals(value) != true)) {
+                    this.PhaseTournoiField = value;
+                    this.RaisePropertyChanged("PhaseTournoi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public WebApplication.WebService.StadeContract Stade {
+            get {
+                return this.StadeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StadeField, value) != true)) {
+                    this.StadeField = value;
+                    this.RaisePropertyChanged("Stade");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public WebApplication.WebService.JediContract Vainqueur {
+            get {
+                return this.VainqueurField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VainqueurField, value) != true)) {
+                    this.VainqueurField = value;
+                    this.RaisePropertyChanged("Vainqueur");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UtilisateurContract", Namespace="http://schemas.datacontract.org/2004/07/WebService.Contract")]
+    [System.SerializableAttribute()]
+    public partial class UtilisateurContract : WebApplication.WebService.EntityContract {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LoginField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Login {
+            get {
+                return this.LoginField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LoginField, value) != true)) {
+                    this.LoginField = value;
+                    this.RaisePropertyChanged("Login");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EPhaseTournoiContract", Namespace="http://schemas.datacontract.org/2004/07/WebService.Contract")]
+    public enum EPhaseTournoiContract : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        QuartFinale = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        HuitiemeFinale = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        DemiFinale = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Finale = 3,
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WebService.IService")]
     public interface IService {
@@ -125,6 +350,90 @@ namespace WebApplication.WebService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DelJedis", ReplyAction="http://tempuri.org/IService/DelJedisResponse")]
         System.Threading.Tasks.Task DelJedisAsync(WebApplication.WebService.JediContract jedi);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetStades", ReplyAction="http://tempuri.org/IService/GetStadesResponse")]
+        WebApplication.WebService.StadeContract[] GetStades();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetStades", ReplyAction="http://tempuri.org/IService/GetStadesResponse")]
+        System.Threading.Tasks.Task<WebApplication.WebService.StadeContract[]> GetStadesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddStades", ReplyAction="http://tempuri.org/IService/AddStadesResponse")]
+        WebApplication.WebService.StadeContract AddStades(WebApplication.WebService.StadeContract sta);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddStades", ReplyAction="http://tempuri.org/IService/AddStadesResponse")]
+        System.Threading.Tasks.Task<WebApplication.WebService.StadeContract> AddStadesAsync(WebApplication.WebService.StadeContract sta);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateStades", ReplyAction="http://tempuri.org/IService/UpdateStadesResponse")]
+        void UpdateStades(WebApplication.WebService.StadeContract sta);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateStades", ReplyAction="http://tempuri.org/IService/UpdateStadesResponse")]
+        System.Threading.Tasks.Task UpdateStadesAsync(WebApplication.WebService.StadeContract sta);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DelStades", ReplyAction="http://tempuri.org/IService/DelStadesResponse")]
+        void DelStades(WebApplication.WebService.StadeContract sta);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DelStades", ReplyAction="http://tempuri.org/IService/DelStadesResponse")]
+        System.Threading.Tasks.Task DelStadesAsync(WebApplication.WebService.StadeContract sta);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetTournois", ReplyAction="http://tempuri.org/IService/GetTournoisResponse")]
+        WebApplication.WebService.TournoiContract[] GetTournois();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetTournois", ReplyAction="http://tempuri.org/IService/GetTournoisResponse")]
+        System.Threading.Tasks.Task<WebApplication.WebService.TournoiContract[]> GetTournoisAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddTournoi", ReplyAction="http://tempuri.org/IService/AddTournoiResponse")]
+        WebApplication.WebService.TournoiContract AddTournoi(WebApplication.WebService.TournoiContract tournoi);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddTournoi", ReplyAction="http://tempuri.org/IService/AddTournoiResponse")]
+        System.Threading.Tasks.Task<WebApplication.WebService.TournoiContract> AddTournoiAsync(WebApplication.WebService.TournoiContract tournoi);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DelTournoi", ReplyAction="http://tempuri.org/IService/DelTournoiResponse")]
+        void DelTournoi(WebApplication.WebService.TournoiContract tournoi);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DelTournoi", ReplyAction="http://tempuri.org/IService/DelTournoiResponse")]
+        System.Threading.Tasks.Task DelTournoiAsync(WebApplication.WebService.TournoiContract tournoi);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateTournoi", ReplyAction="http://tempuri.org/IService/UpdateTournoiResponse")]
+        void UpdateTournoi(WebApplication.WebService.TournoiContract tournoi);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateTournoi", ReplyAction="http://tempuri.org/IService/UpdateTournoiResponse")]
+        System.Threading.Tasks.Task UpdateTournoiAsync(WebApplication.WebService.TournoiContract tournoi);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CheckUtilisateurs", ReplyAction="http://tempuri.org/IService/CheckUtilisateursResponse")]
+        bool CheckUtilisateurs(WebApplication.WebService.UtilisateurContract user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CheckUtilisateurs", ReplyAction="http://tempuri.org/IService/CheckUtilisateursResponse")]
+        System.Threading.Tasks.Task<bool> CheckUtilisateursAsync(WebApplication.WebService.UtilisateurContract user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddUtilisateur", ReplyAction="http://tempuri.org/IService/AddUtilisateurResponse")]
+        WebApplication.WebService.UtilisateurContract AddUtilisateur(WebApplication.WebService.UtilisateurContract user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddUtilisateur", ReplyAction="http://tempuri.org/IService/AddUtilisateurResponse")]
+        System.Threading.Tasks.Task<WebApplication.WebService.UtilisateurContract> AddUtilisateurAsync(WebApplication.WebService.UtilisateurContract user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetMatchs", ReplyAction="http://tempuri.org/IService/GetMatchsResponse")]
+        WebApplication.WebService.MatchContract[] GetMatchs();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetMatchs", ReplyAction="http://tempuri.org/IService/GetMatchsResponse")]
+        System.Threading.Tasks.Task<WebApplication.WebService.MatchContract[]> GetMatchsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddMatch", ReplyAction="http://tempuri.org/IService/AddMatchResponse")]
+        WebApplication.WebService.MatchContract AddMatch(WebApplication.WebService.MatchContract match);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddMatch", ReplyAction="http://tempuri.org/IService/AddMatchResponse")]
+        System.Threading.Tasks.Task<WebApplication.WebService.MatchContract> AddMatchAsync(WebApplication.WebService.MatchContract match);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateMatch", ReplyAction="http://tempuri.org/IService/UpdateMatchResponse")]
+        void UpdateMatch(WebApplication.WebService.MatchContract match);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateMatch", ReplyAction="http://tempuri.org/IService/UpdateMatchResponse")]
+        System.Threading.Tasks.Task UpdateMatchAsync(WebApplication.WebService.MatchContract match);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DelMatch", ReplyAction="http://tempuri.org/IService/DelMatchResponse")]
+        void DelMatch(WebApplication.WebService.MatchContract match);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DelMatch", ReplyAction="http://tempuri.org/IService/DelMatchResponse")]
+        System.Threading.Tasks.Task DelMatchAsync(WebApplication.WebService.MatchContract match);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -184,6 +493,118 @@ namespace WebApplication.WebService {
         
         public System.Threading.Tasks.Task DelJedisAsync(WebApplication.WebService.JediContract jedi) {
             return base.Channel.DelJedisAsync(jedi);
+        }
+        
+        public WebApplication.WebService.StadeContract[] GetStades() {
+            return base.Channel.GetStades();
+        }
+        
+        public System.Threading.Tasks.Task<WebApplication.WebService.StadeContract[]> GetStadesAsync() {
+            return base.Channel.GetStadesAsync();
+        }
+        
+        public WebApplication.WebService.StadeContract AddStades(WebApplication.WebService.StadeContract sta) {
+            return base.Channel.AddStades(sta);
+        }
+        
+        public System.Threading.Tasks.Task<WebApplication.WebService.StadeContract> AddStadesAsync(WebApplication.WebService.StadeContract sta) {
+            return base.Channel.AddStadesAsync(sta);
+        }
+        
+        public void UpdateStades(WebApplication.WebService.StadeContract sta) {
+            base.Channel.UpdateStades(sta);
+        }
+        
+        public System.Threading.Tasks.Task UpdateStadesAsync(WebApplication.WebService.StadeContract sta) {
+            return base.Channel.UpdateStadesAsync(sta);
+        }
+        
+        public void DelStades(WebApplication.WebService.StadeContract sta) {
+            base.Channel.DelStades(sta);
+        }
+        
+        public System.Threading.Tasks.Task DelStadesAsync(WebApplication.WebService.StadeContract sta) {
+            return base.Channel.DelStadesAsync(sta);
+        }
+        
+        public WebApplication.WebService.TournoiContract[] GetTournois() {
+            return base.Channel.GetTournois();
+        }
+        
+        public System.Threading.Tasks.Task<WebApplication.WebService.TournoiContract[]> GetTournoisAsync() {
+            return base.Channel.GetTournoisAsync();
+        }
+        
+        public WebApplication.WebService.TournoiContract AddTournoi(WebApplication.WebService.TournoiContract tournoi) {
+            return base.Channel.AddTournoi(tournoi);
+        }
+        
+        public System.Threading.Tasks.Task<WebApplication.WebService.TournoiContract> AddTournoiAsync(WebApplication.WebService.TournoiContract tournoi) {
+            return base.Channel.AddTournoiAsync(tournoi);
+        }
+        
+        public void DelTournoi(WebApplication.WebService.TournoiContract tournoi) {
+            base.Channel.DelTournoi(tournoi);
+        }
+        
+        public System.Threading.Tasks.Task DelTournoiAsync(WebApplication.WebService.TournoiContract tournoi) {
+            return base.Channel.DelTournoiAsync(tournoi);
+        }
+        
+        public void UpdateTournoi(WebApplication.WebService.TournoiContract tournoi) {
+            base.Channel.UpdateTournoi(tournoi);
+        }
+        
+        public System.Threading.Tasks.Task UpdateTournoiAsync(WebApplication.WebService.TournoiContract tournoi) {
+            return base.Channel.UpdateTournoiAsync(tournoi);
+        }
+        
+        public bool CheckUtilisateurs(WebApplication.WebService.UtilisateurContract user) {
+            return base.Channel.CheckUtilisateurs(user);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CheckUtilisateursAsync(WebApplication.WebService.UtilisateurContract user) {
+            return base.Channel.CheckUtilisateursAsync(user);
+        }
+        
+        public WebApplication.WebService.UtilisateurContract AddUtilisateur(WebApplication.WebService.UtilisateurContract user) {
+            return base.Channel.AddUtilisateur(user);
+        }
+        
+        public System.Threading.Tasks.Task<WebApplication.WebService.UtilisateurContract> AddUtilisateurAsync(WebApplication.WebService.UtilisateurContract user) {
+            return base.Channel.AddUtilisateurAsync(user);
+        }
+        
+        public WebApplication.WebService.MatchContract[] GetMatchs() {
+            return base.Channel.GetMatchs();
+        }
+        
+        public System.Threading.Tasks.Task<WebApplication.WebService.MatchContract[]> GetMatchsAsync() {
+            return base.Channel.GetMatchsAsync();
+        }
+        
+        public WebApplication.WebService.MatchContract AddMatch(WebApplication.WebService.MatchContract match) {
+            return base.Channel.AddMatch(match);
+        }
+        
+        public System.Threading.Tasks.Task<WebApplication.WebService.MatchContract> AddMatchAsync(WebApplication.WebService.MatchContract match) {
+            return base.Channel.AddMatchAsync(match);
+        }
+        
+        public void UpdateMatch(WebApplication.WebService.MatchContract match) {
+            base.Channel.UpdateMatch(match);
+        }
+        
+        public System.Threading.Tasks.Task UpdateMatchAsync(WebApplication.WebService.MatchContract match) {
+            return base.Channel.UpdateMatchAsync(match);
+        }
+        
+        public void DelMatch(WebApplication.WebService.MatchContract match) {
+            base.Channel.DelMatch(match);
+        }
+        
+        public System.Threading.Tasks.Task DelMatchAsync(WebApplication.WebService.MatchContract match) {
+            return base.Channel.DelMatchAsync(match);
         }
     }
 }

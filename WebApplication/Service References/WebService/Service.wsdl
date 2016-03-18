@@ -1,30 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-  <wsp:Policy wsu:Id="BasicHttpsBinding_IService_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <wsp:Policy>
-            <sp:TransportToken>
-              <wsp:Policy>
-                <sp:HttpsToken RequireClientCertificate="false" />
-              </wsp:Policy>
-            </sp:TransportToken>
-            <sp:AlgorithmSuite>
-              <wsp:Policy>
-                <sp:Basic256 />
-              </wsp:Policy>
-            </sp:AlgorithmSuite>
-            <sp:Layout>
-              <wsp:Policy>
-                <sp:Strict />
-              </wsp:Policy>
-            </sp:Layout>
-          </wsp:Policy>
-        </sp:TransportBinding>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://jeditournamentwebservice.azurewebsites.net/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
@@ -56,6 +31,90 @@
   <wsdl:message name="IService_DelJedis_OutputMessage">
     <wsdl:part name="parameters" element="tns:DelJedisResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_GetStades_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStades" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetStades_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddStades_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddStades" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddStades_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddStadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateStades_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStades" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateStades_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DelStades_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelStades" />
+  </wsdl:message>
+  <wsdl:message name="IService_DelStades_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelStadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetTournois_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTournois" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetTournois_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTournoisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddTournoi_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTournoi" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddTournoi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTournoiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DelTournoi_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelTournoi" />
+  </wsdl:message>
+  <wsdl:message name="IService_DelTournoi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelTournoiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateTournoi_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTournoi" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateTournoi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTournoiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_CheckUtilisateurs_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUtilisateurs" />
+  </wsdl:message>
+  <wsdl:message name="IService_CheckUtilisateurs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUtilisateursResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddUtilisateur_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUtilisateur" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddUtilisateur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUtilisateurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetMatchs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMatchs" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetMatchs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMatchsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddMatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMatch" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddMatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateMatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMatch" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateMatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DelMatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelMatch" />
+  </wsdl:message>
+  <wsdl:message name="IService_DelMatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelMatchResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="GetJedis">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/GetJedis" message="tns:IService_GetJedis_InputMessage" />
@@ -72,6 +131,62 @@
     <wsdl:operation name="DelJedis">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/DelJedis" message="tns:IService_DelJedis_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/DelJedisResponse" message="tns:IService_DelJedis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStades">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetStades" message="tns:IService_GetStades_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetStadesResponse" message="tns:IService_GetStades_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddStades">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddStades" message="tns:IService_AddStades_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddStadesResponse" message="tns:IService_AddStades_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStades">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateStades" message="tns:IService_UpdateStades_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateStadesResponse" message="tns:IService_UpdateStades_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelStades">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DelStades" message="tns:IService_DelStades_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DelStadesResponse" message="tns:IService_DelStades_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTournois">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetTournois" message="tns:IService_GetTournois_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetTournoisResponse" message="tns:IService_GetTournois_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTournoi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddTournoi" message="tns:IService_AddTournoi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddTournoiResponse" message="tns:IService_AddTournoi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelTournoi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DelTournoi" message="tns:IService_DelTournoi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DelTournoiResponse" message="tns:IService_DelTournoi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTournoi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateTournoi" message="tns:IService_UpdateTournoi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateTournoiResponse" message="tns:IService_UpdateTournoi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUtilisateurs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CheckUtilisateurs" message="tns:IService_CheckUtilisateurs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CheckUtilisateursResponse" message="tns:IService_CheckUtilisateurs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUtilisateur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddUtilisateur" message="tns:IService_AddUtilisateur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddUtilisateurResponse" message="tns:IService_AddUtilisateur_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetMatchs" message="tns:IService_GetMatchs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetMatchsResponse" message="tns:IService_GetMatchs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddMatch" message="tns:IService_AddMatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddMatchResponse" message="tns:IService_AddMatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateMatch" message="tns:IService_UpdateMatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateMatchResponse" message="tns:IService_UpdateMatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelMatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DelMatch" message="tns:IService_DelMatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DelMatchResponse" message="tns:IService_DelMatch_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
@@ -112,12 +227,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-  </wsdl:binding>
-  <wsdl:binding name="BasicHttpsBinding_IService" type="tns:IService">
-    <wsp:PolicyReference URI="#BasicHttpsBinding_IService_policy" />
-    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetJedis">
-      <soap:operation soapAction="http://tempuri.org/IService/GetJedis" style="document" />
+    <wsdl:operation name="GetStades">
+      <soap:operation soapAction="http://tempuri.org/IService/GetStades" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -125,8 +236,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="AddJedis">
-      <soap:operation soapAction="http://tempuri.org/IService/AddJedis" style="document" />
+    <wsdl:operation name="AddStades">
+      <soap:operation soapAction="http://tempuri.org/IService/AddStades" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -134,8 +245,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateJedis">
-      <soap:operation soapAction="http://tempuri.org/IService/UpdateJedis" style="document" />
+    <wsdl:operation name="UpdateStades">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateStades" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -143,8 +254,98 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="DelJedis">
-      <soap:operation soapAction="http://tempuri.org/IService/DelJedis" style="document" />
+    <wsdl:operation name="DelStades">
+      <soap:operation soapAction="http://tempuri.org/IService/DelStades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTournois">
+      <soap:operation soapAction="http://tempuri.org/IService/GetTournois" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTournoi">
+      <soap:operation soapAction="http://tempuri.org/IService/AddTournoi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelTournoi">
+      <soap:operation soapAction="http://tempuri.org/IService/DelTournoi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTournoi">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateTournoi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUtilisateurs">
+      <soap:operation soapAction="http://tempuri.org/IService/CheckUtilisateurs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUtilisateur">
+      <soap:operation soapAction="http://tempuri.org/IService/AddUtilisateur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchs">
+      <soap:operation soapAction="http://tempuri.org/IService/GetMatchs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMatch">
+      <soap:operation soapAction="http://tempuri.org/IService/AddMatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMatch">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateMatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelMatch">
+      <soap:operation soapAction="http://tempuri.org/IService/DelMatch" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -156,9 +357,6 @@
   <wsdl:service name="Service">
     <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
       <soap:address location="http://jeditournamentwebservice.azurewebsites.net/Service.svc" />
-    </wsdl:port>
-    <wsdl:port name="BasicHttpsBinding_IService" binding="tns:BasicHttpsBinding_IService">
-      <soap:address location="https://jeditournamentwebservice.azurewebsites.net/Service.svc" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
