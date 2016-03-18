@@ -3,34 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using WebApplication.WebService;
 
 namespace WebApplication.Controllers
 {
-    public class JediController : Controller
+    public class StadeController : Controller
     {
-        // GET: Jedi
+        // GET: Stade
         public ActionResult Index()
         {
-            ServiceClient webService = new ServiceClient();
-            ViewBag.Jedis = webService.GetJedis();
-            webService.Close();
+            //StadeServiceClient client = new StadeServiceClient();
+            //ViewBag.Stades = client.GetStades();
+            //client.Close();
             return View();
         }
 
-        // GET: Jedi/Details/5
+        // GET: Stade/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Jedi/Create
+        // GET: Stade/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Jedi/Create
+        // POST: Stade/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -46,13 +45,13 @@ namespace WebApplication.Controllers
             }
         }
 
-        // GET: Jedi/Edit/5
+        // GET: Stade/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Jedi/Edit/5
+        // POST: Stade/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -68,13 +67,13 @@ namespace WebApplication.Controllers
             }
         }
 
-        // GET: Jedi/Delete/5
+        // GET: Stade/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Jedi/Delete/5
+        // POST: Stade/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Liste des Stades";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <tr>
+        <td>Id</td>
+        <td>Planète</td>
+        <td>Nombre de Places</td>
+    </tr>
+    @foreach (var stade in ViewBag.Stades)
+    {
+        <tr>
+            <td>@stade.ID</td>
+            <td>@stade.Planete</td>
+            <td>@stade.NbPlaces</td>
+        </tr>
+    }
+</table>

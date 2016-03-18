@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication.Services {
+namespace WebApplication.WebService {
     using System.Runtime.Serialization;
     using System;
     
@@ -17,7 +17,7 @@ namespace WebApplication.Services {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="JediContract", Namespace="http://schemas.datacontract.org/2004/07/WebService.Contract")]
     [System.SerializableAttribute()]
-    public partial class JediContract : WebApplication.Services.EntityContract {
+    public partial class JediContract : WebApplication.WebService.EntityContract {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool IsSithField;
@@ -56,7 +56,7 @@ namespace WebApplication.Services {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="EntityContract", Namespace="http://schemas.datacontract.org/2004/07/WebService.Contract")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WebApplication.Services.JediContract))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WebApplication.WebService.JediContract))]
     public partial class EntityContract : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -99,90 +99,90 @@ namespace WebApplication.Services {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="Services.IJediService")]
-    public interface IJediService {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WebService.IService")]
+    public interface IService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJediService/GetJedis", ReplyAction="http://tempuri.org/IJediService/GetJedisResponse")]
-        WebApplication.Services.JediContract[] GetJedis();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetJedis", ReplyAction="http://tempuri.org/IService/GetJedisResponse")]
+        WebApplication.WebService.JediContract[] GetJedis();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJediService/GetJedis", ReplyAction="http://tempuri.org/IJediService/GetJedisResponse")]
-        System.Threading.Tasks.Task<WebApplication.Services.JediContract[]> GetJedisAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetJedis", ReplyAction="http://tempuri.org/IService/GetJedisResponse")]
+        System.Threading.Tasks.Task<WebApplication.WebService.JediContract[]> GetJedisAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJediService/AddJedis", ReplyAction="http://tempuri.org/IJediService/AddJedisResponse")]
-        WebApplication.Services.JediContract AddJedis(WebApplication.Services.JediContract jedi);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddJedis", ReplyAction="http://tempuri.org/IService/AddJedisResponse")]
+        WebApplication.WebService.JediContract AddJedis(WebApplication.WebService.JediContract jedi);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJediService/AddJedis", ReplyAction="http://tempuri.org/IJediService/AddJedisResponse")]
-        System.Threading.Tasks.Task<WebApplication.Services.JediContract> AddJedisAsync(WebApplication.Services.JediContract jedi);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddJedis", ReplyAction="http://tempuri.org/IService/AddJedisResponse")]
+        System.Threading.Tasks.Task<WebApplication.WebService.JediContract> AddJedisAsync(WebApplication.WebService.JediContract jedi);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJediService/UpdateJedis", ReplyAction="http://tempuri.org/IJediService/UpdateJedisResponse")]
-        WebApplication.Services.JediContract UpdateJedis(WebApplication.Services.JediContract jedi);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateJedis", ReplyAction="http://tempuri.org/IService/UpdateJedisResponse")]
+        void UpdateJedis(WebApplication.WebService.JediContract jedi);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJediService/UpdateJedis", ReplyAction="http://tempuri.org/IJediService/UpdateJedisResponse")]
-        System.Threading.Tasks.Task<WebApplication.Services.JediContract> UpdateJedisAsync(WebApplication.Services.JediContract jedi);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateJedis", ReplyAction="http://tempuri.org/IService/UpdateJedisResponse")]
+        System.Threading.Tasks.Task UpdateJedisAsync(WebApplication.WebService.JediContract jedi);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJediService/DelJedis", ReplyAction="http://tempuri.org/IJediService/DelJedisResponse")]
-        bool DelJedis(WebApplication.Services.JediContract jedi);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DelJedis", ReplyAction="http://tempuri.org/IService/DelJedisResponse")]
+        void DelJedis(WebApplication.WebService.JediContract jedi);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJediService/DelJedis", ReplyAction="http://tempuri.org/IJediService/DelJedisResponse")]
-        System.Threading.Tasks.Task<bool> DelJedisAsync(WebApplication.Services.JediContract jedi);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DelJedis", ReplyAction="http://tempuri.org/IService/DelJedisResponse")]
+        System.Threading.Tasks.Task DelJedisAsync(WebApplication.WebService.JediContract jedi);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IJediServiceChannel : WebApplication.Services.IJediService, System.ServiceModel.IClientChannel {
+    public interface IServiceChannel : WebApplication.WebService.IService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class JediServiceClient : System.ServiceModel.ClientBase<WebApplication.Services.IJediService>, WebApplication.Services.IJediService {
+    public partial class ServiceClient : System.ServiceModel.ClientBase<WebApplication.WebService.IService>, WebApplication.WebService.IService {
         
-        public JediServiceClient() {
+        public ServiceClient() {
         }
         
-        public JediServiceClient(string endpointConfigurationName) : 
+        public ServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public JediServiceClient(string endpointConfigurationName, string remoteAddress) : 
+        public ServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public JediServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public JediServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public WebApplication.Services.JediContract[] GetJedis() {
+        public WebApplication.WebService.JediContract[] GetJedis() {
             return base.Channel.GetJedis();
         }
         
-        public System.Threading.Tasks.Task<WebApplication.Services.JediContract[]> GetJedisAsync() {
+        public System.Threading.Tasks.Task<WebApplication.WebService.JediContract[]> GetJedisAsync() {
             return base.Channel.GetJedisAsync();
         }
         
-        public WebApplication.Services.JediContract AddJedis(WebApplication.Services.JediContract jedi) {
+        public WebApplication.WebService.JediContract AddJedis(WebApplication.WebService.JediContract jedi) {
             return base.Channel.AddJedis(jedi);
         }
         
-        public System.Threading.Tasks.Task<WebApplication.Services.JediContract> AddJedisAsync(WebApplication.Services.JediContract jedi) {
+        public System.Threading.Tasks.Task<WebApplication.WebService.JediContract> AddJedisAsync(WebApplication.WebService.JediContract jedi) {
             return base.Channel.AddJedisAsync(jedi);
         }
         
-        public WebApplication.Services.JediContract UpdateJedis(WebApplication.Services.JediContract jedi) {
-            return base.Channel.UpdateJedis(jedi);
+        public void UpdateJedis(WebApplication.WebService.JediContract jedi) {
+            base.Channel.UpdateJedis(jedi);
         }
         
-        public System.Threading.Tasks.Task<WebApplication.Services.JediContract> UpdateJedisAsync(WebApplication.Services.JediContract jedi) {
+        public System.Threading.Tasks.Task UpdateJedisAsync(WebApplication.WebService.JediContract jedi) {
             return base.Channel.UpdateJedisAsync(jedi);
         }
         
-        public bool DelJedis(WebApplication.Services.JediContract jedi) {
-            return base.Channel.DelJedis(jedi);
+        public void DelJedis(WebApplication.WebService.JediContract jedi) {
+            base.Channel.DelJedis(jedi);
         }
         
-        public System.Threading.Tasks.Task<bool> DelJedisAsync(WebApplication.Services.JediContract jedi) {
+        public System.Threading.Tasks.Task DelJedisAsync(WebApplication.WebService.JediContract jedi) {
             return base.Channel.DelJedisAsync(jedi);
         }
     }

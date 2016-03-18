@@ -202,6 +202,9 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JediController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MatchController.cs" />
+    <Compile Include="Controllers\StadeController.cs" />
+    <Compile Include="Controllers\TournoiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,7 +213,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\Services\Reference.cs">
+    <Compile Include="Service References\WebService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -247,14 +250,16 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <None Include="Service References\Services\JediService.disco" />
-    <None Include="Service References\Services\configuration91.svcinfo" />
-    <None Include="Service References\Services\configuration.svcinfo" />
-    <None Include="Service References\Services\Reference.svcmap">
+    <None Include="Service References\WebService\Service.disco" />
+    <None Include="Service References\WebService\configuration91.svcinfo" />
+    <None Include="Service References\WebService\configuration.svcinfo" />
+    <None Include="Service References\WebService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -286,17 +291,20 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
     <Content Include="Views\Jedi\Index.cshtml" />
-    <None Include="Service References\Services\JediService.wsdl" />
-    <None Include="Service References\Services\JediService.xsd">
+    <Content Include="Views\Stade\Index.cshtml" />
+    <Content Include="Views\Tournoi\Index.cshtml" />
+    <Content Include="Views\Match\Index.cshtml" />
+    <None Include="Service References\WebService\Service.wsdl" />
+    <None Include="Service References\WebService\Service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Services\JediService1.xsd">
+    <None Include="Service References\WebService\Service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Services\JediService2.xsd">
+    <None Include="Service References\WebService\Service2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Service References\Services\WebApplication.Services.JediContract.datasource">
+    <Content Include="Service References\WebService\WebApplication.WebService.JediContract.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
   </ItemGroup>
@@ -315,7 +323,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\Services\" />
+    <WCFMetadataStorage Include="Service References\WebService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
