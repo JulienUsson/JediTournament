@@ -14,7 +14,7 @@ namespace WebService
     // REMARQUE : pour lancer le client test WCF afin de tester ce service, sélectionnez UtilisateurService.svc ou UtilisateurService.svc.cs dans l'Explorateur de solutions et démarrez le débogage.
     public class UtilisateurService : IUtilisateurService
     {
-        private UtilisateurManager usem;
+        private UtilisateurManager usem=new UtilisateurManager();
 
         public UtilisateurContract AddUtilisateur(UtilisateurContract user)
         {
@@ -27,9 +27,8 @@ namespace WebService
 
         public bool CheckUtilisateurs(UtilisateurContract user)
         {
-            var login = UtilisateurAdapter.UtilisateurContractToUtilisateur(user).Login;
-            var password = UtilisateurAdapter.UtilisateurContractToUtilisateur(user).Password;
-            usem.CheckConnexionUser(login, password);
+            var u = UtilisateurAdapter.UtilisateurContractToUtilisateur(user);
+            return usem.CheckConnexionUser(u.Login, u.Password);
         }
     }
 }

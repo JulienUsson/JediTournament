@@ -13,7 +13,7 @@ namespace WebService
     public interface IUtilisateurService
     {
         [OperationContract]
-        bool CheckUtilisateurs();
+        bool CheckUtilisateurs(UtilisateurContract user);
 
         [OperationContract]
         UtilisateurContract AddUtilisateur(UtilisateurContract user);
