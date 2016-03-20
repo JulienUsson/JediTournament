@@ -9,10 +9,12 @@ namespace WebApplication.Controllers
 {
     public class JediController : Controller
     {
+
         // GET: Jedi
         public ActionResult Index()
         {
             ServiceClient webService = new ServiceClient();
+
             ViewBag.Jedis = webService.GetJedis();
             webService.Close();
             return View();
@@ -26,17 +28,19 @@ namespace WebApplication.Controllers
 
         // GET: Jedi/Create
         public ActionResult Create()
-        {
+        {    
             return View();
         }
 
         // POST: Jedi/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(JediContract jedi)
         {
+            ServiceClient webService = new ServiceClient();
+
             try
             {
-                // TODO: Add insert logic here
+                webService.AddJedis(jedi);
 
                 return RedirectToAction("Index");
             }
@@ -54,11 +58,13 @@ namespace WebApplication.Controllers
 
         // POST: Jedi/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, JediContract jedi)
         {
+            ServiceClient webService = new ServiceClient();
+
             try
             {
-                // TODO: Add update logic here
+                webService.UpdateJedis(jedi);
 
                 return RedirectToAction("Index");
             }
@@ -76,11 +82,13 @@ namespace WebApplication.Controllers
 
         // POST: Jedi/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, JediContract jedi)
         {
+            ServiceClient webService = new ServiceClient();
+
             try
             {
-                // TODO: Add delete logic here
+                webService.DelJedis(jedi);
 
                 return RedirectToAction("Index");
             }

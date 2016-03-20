@@ -1,9 +1,14 @@
-﻿
+﻿@model IEnumerable<WebApplication.Models.JediViewModel>
+
 @{
-    ViewBag.Title = "Liste des jedis";
+    ViewBag.Title = "Index";
 }
 
 <h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
 
 <table class="table">
     <tr>
@@ -16,7 +21,7 @@
         <tr>
             <td>@jedi.ID</td>
             <td>@jedi.Nom</td>
-            @if(jedi.IsSith)
+            @if (jedi.IsSith)
             {
                 <td>Sith</td>
             }
@@ -24,6 +29,10 @@
             {
                 <td>Jedi</td>
             }
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = jedi.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = jedi.ID })
+            </td>
         </tr>
     }
 </table>

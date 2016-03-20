@@ -212,7 +212,10 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EntityModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\JediViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MatchsViewModel.cs" />
+    <Compile Include="Models\StadesViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\WebService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -290,7 +293,6 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
-    <Content Include="Views\Jedi\Index.cshtml" />
     <Content Include="Views\Stade\Index.cshtml" />
     <Content Include="Views\Tournoi\Index.cshtml" />
     <Content Include="Views\Match\Index.cshtml" />
@@ -320,6 +322,10 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Views\Game\Index.cshtml" />
+    <Content Include="Views\Jedi\Create.cshtml" />
+    <Content Include="Views\Jedi\Index.cshtml" />
+    <Content Include="Views\Jedi\Delete.cshtml" />
+    <Content Include="Views\Jedi\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
