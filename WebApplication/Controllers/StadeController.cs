@@ -32,11 +32,13 @@ namespace WebApplication.Controllers
 
         // POST: Stade/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(StadeContract stade)
         {
+            ServiceClient webService = new ServiceClient();
+
             try
             {
-                // TODO: Add insert logic here
+                webService.AddStades(stade);
 
                 return RedirectToAction("Index");
             }
@@ -54,11 +56,13 @@ namespace WebApplication.Controllers
 
         // POST: Stade/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, StadeContract stade)
         {
+            ServiceClient webService = new ServiceClient();
+
             try
             {
-                // TODO: Add update logic here
+                webService.UpdateStades(stade);
 
                 return RedirectToAction("Index");
             }
@@ -76,11 +80,12 @@ namespace WebApplication.Controllers
 
         // POST: Stade/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, StadeContract stade)
         {
+            ServiceClient webService = new ServiceClient();
             try
             {
-                // TODO: Add delete logic here
+                webService.DelStades(stade);
 
                 return RedirectToAction("Index");
             }

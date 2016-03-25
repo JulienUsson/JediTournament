@@ -32,12 +32,13 @@ namespace WebApplication.Controllers
 
         // POST: Match/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(MatchContract match)
         {
+            ServiceClient webService = new ServiceClient();
+
             try
             {
-                // TODO: Add insert logic here
-
+                webService.AddMatch(match);
                 return RedirectToAction("Index");
             }
             catch
@@ -54,11 +55,13 @@ namespace WebApplication.Controllers
 
         // POST: Match/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, MatchContract match)
         {
+            ServiceClient webService = new ServiceClient();
+
             try
             {
-                // TODO: Add update logic here
+                webService.UpdateMatch(match);
 
                 return RedirectToAction("Index");
             }
@@ -76,11 +79,13 @@ namespace WebApplication.Controllers
 
         // POST: Match/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, MatchContract match)
         {
+            ServiceClient webService = new ServiceClient();
+
             try
             {
-                // TODO: Add delete logic here
+                webService.DelMatch(match);
 
                 return RedirectToAction("Index");
             }

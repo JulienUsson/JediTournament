@@ -5,6 +5,10 @@
 
 <h2>@ViewBag.Title</h2>
 
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
 <table class="table">
     <tr>
         <td>Id</td>
@@ -17,6 +21,11 @@
             <td>@stade.ID</td>
             <td>@stade.Planete</td>
             <td>@stade.NbPlaces</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = stade.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = stade.ID })
+            </td>
         </tr>
+
     }
 </table>

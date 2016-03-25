@@ -31,5 +31,7 @@ namespace WebApplication.Models
         }
 
         public System.Data.Entity.DbSet<WebApplication.Models.JediViewModel> JediViewModels { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication.Models.MatchsViewModel> MatchsViewModels { get; set; }
     }
 }

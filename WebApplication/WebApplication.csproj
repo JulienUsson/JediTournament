@@ -326,6 +326,12 @@
     <Content Include="Views\Jedi\Index.cshtml" />
     <Content Include="Views\Jedi\Delete.cshtml" />
     <Content Include="Views\Jedi\Edit.cshtml" />
+    <Content Include="Views\Stade\Create.cshtml" />
+    <Content Include="Views\Stade\Edit.cshtml" />
+    <Content Include="Views\Stade\Delete.cshtml" />
+    <Content Include="Views\Match\Create.cshtml" />
+    <Content Include="Views\Match\Edit.cshtml" />
+    <Content Include="Views\Match\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
