@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Liste des Tournois";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <tr>
+        <td>Id</td>
+        <td>Nom</td>
+        <td>Matchs</td>
+    </tr>
+    @foreach (var tournoi in ViewBag.Tournois)
+    {
+        <tr>
+            <td>@tournoi.ID</td>
+            <td>@tournoi.Nom</td>
+            <td>
+                @if(tournoi.Matchs!=null)
+                {
+                    foreach (var match in tournoi.Matchs)
+                    {
+                        @match.Nom
+                    }
+                }
+            </td>
+        </tr>
+    }
+</table>

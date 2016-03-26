@@ -1,0 +1,40 @@
+﻿@model WebApplication.Models.StadesViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>StadesViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NbPlaces)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NbPlaces)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Planete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Planete)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

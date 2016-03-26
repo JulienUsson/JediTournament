@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Liste des Stades";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <td>Id</td>
+        <td>Planète</td>
+        <td>Nombre de Places</td>
+    </tr>
+    @foreach (var stade in ViewBag.Stades)
+    {
+        <tr>
+            <td>@stade.ID</td>
+            <td>@stade.Planete</td>
+            <td>@stade.NbPlaces</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = stade.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = stade.ID })
+            </td>
+        </tr>
+
+    }
+</table>

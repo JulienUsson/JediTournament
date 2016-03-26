@@ -14,6 +14,11 @@ namespace JediTournamentEntities
         public int NbPlaces { get; set; }
         public string Planete { get; set; }
 
+        public Stade()
+        {
+            Caracteristiques = new List<Caracteristique>();
+        }
+
         public Stade(int id,int nbPlaces,string planete):base(id)
         {
             Caracteristiques = new List<Caracteristique>();

@@ -7,40 +7,36 @@ using WebApplication.WebService;
 
 namespace WebApplication.Controllers
 {
-    public class JediController : Controller
+    public class TournoiController : Controller
     {
-
-        // GET: Jedi
+        // GET: Tournoi
         public ActionResult Index()
         {
             ServiceClient webService = new ServiceClient();
-
-            ViewBag.Jedis = webService.GetJedis();
+            ViewBag.Tournois = webService.GetTournois();
             webService.Close();
             return View();
         }
 
-        // GET: Jedi/Details/5
+        // GET: Tournoi/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Jedi/Create
+        // GET: Tournoi/Create
         public ActionResult Create()
-        {    
+        {
             return View();
         }
 
-        // POST: Jedi/Create
+        // POST: Tournoi/Create
         [HttpPost]
-        public ActionResult Create(JediContract jedi)
+        public ActionResult Create(FormCollection collection)
         {
-            ServiceClient webService = new ServiceClient();
-
             try
             {
-                webService.AddJedis(jedi);
+                // TODO: Add insert logic here
 
                 return RedirectToAction("Index");
             }
@@ -50,21 +46,19 @@ namespace WebApplication.Controllers
             }
         }
 
-        // GET: Jedi/Edit/5
+        // GET: Tournoi/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Jedi/Edit/5
+        // POST: Tournoi/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, JediContract jedi)
+        public ActionResult Edit(int id, FormCollection collection)
         {
-            ServiceClient webService = new ServiceClient();
-
             try
             {
-                webService.UpdateJedis(jedi);
+                // TODO: Add update logic here
 
                 return RedirectToAction("Index");
             }
@@ -74,21 +68,19 @@ namespace WebApplication.Controllers
             }
         }
 
-        // GET: Jedi/Delete/5
+        // GET: Tournoi/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Jedi/Delete/5
+        // POST: Tournoi/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, JediContract jedi)
+        public ActionResult Delete(int id, FormCollection collection)
         {
-            ServiceClient webService = new ServiceClient();
-
             try
             {
-                webService.DelJedis(jedi);
+                // TODO: Add delete logic here
 
                 return RedirectToAction("Index");
             }

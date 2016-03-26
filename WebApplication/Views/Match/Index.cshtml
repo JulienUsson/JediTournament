@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Liste des Matchs";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <tr>
+        <td>Id</td>
+        <td>Jedi 1</td>
+        <td>Jedi 2</td>
+        <td>Stade</td>
+        <td>Vainqueur</td>
+    </tr>
+    @foreach (var match in ViewBag.Matchs)
+    {
+        <tr>
+            <td>@match.ID</td>
+            <td class="<%= (match.Jedi1==match.Vainqueur.Id)?"Active":""; %>">@match.Jedi1.Nom</td>
+            <td>@match.Jedi2.Nom</td>
+            <td>@match.Vainqueur.Nom</td>
+            <td>@match.Stade.Planete</td>
+        </tr>
+    }
+</table>

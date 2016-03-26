@@ -56,6 +56,16 @@ namespace BusinessLayer
             DalManager.Instance.DeleteMatch(match);
         }
 
+        public void UpdateMatch(Match match)
+        {
+            DalManager.Instance.UpdateMatch(match);
+        }
+
+        public void UpdateTournoi(Tournoi tournoi)
+        {
+            DalManager.Instance.UpdateTournoi(tournoi);
+        }
+
         public void AddStade(Stade stade)
         {
             DalManager.Instance.AddStade(stade);
@@ -64,6 +74,11 @@ namespace BusinessLayer
         public void DelStade(Stade stade)
         {
             DalManager.Instance.DeleteStade(stade);
+        }
+
+        public void UpdateStade(Stade stade)
+        {
+            DalManager.Instance.UpdateStade(stade);
         }
 
         public void AddTournoi(Tournoi tournoi)

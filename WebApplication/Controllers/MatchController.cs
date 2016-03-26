@@ -7,41 +7,38 @@ using WebApplication.WebService;
 
 namespace WebApplication.Controllers
 {
-    public class JediController : Controller
+    public class MatchController : Controller
     {
-
-        // GET: Jedi
+        // GET: Match
         public ActionResult Index()
         {
             ServiceClient webService = new ServiceClient();
-
-            ViewBag.Jedis = webService.GetJedis();
+            ViewBag.Matchs = webService.GetMatchs();
             webService.Close();
             return View();
         }
 
-        // GET: Jedi/Details/5
+        // GET: Match/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Jedi/Create
+        // GET: Match/Create
         public ActionResult Create()
-        {    
+        {
             return View();
         }
 
-        // POST: Jedi/Create
+        // POST: Match/Create
         [HttpPost]
-        public ActionResult Create(JediContract jedi)
+        public ActionResult Create(MatchContract match)
         {
             ServiceClient webService = new ServiceClient();
 
             try
             {
-                webService.AddJedis(jedi);
-
+                webService.AddMatch(match);
                 return RedirectToAction("Index");
             }
             catch
@@ -50,21 +47,21 @@ namespace WebApplication.Controllers
             }
         }
 
-        // GET: Jedi/Edit/5
+        // GET: Match/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Jedi/Edit/5
+        // POST: Match/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, JediContract jedi)
+        public ActionResult Edit(int id, MatchContract match)
         {
             ServiceClient webService = new ServiceClient();
 
             try
             {
-                webService.UpdateJedis(jedi);
+                webService.UpdateMatch(match);
 
                 return RedirectToAction("Index");
             }
@@ -74,21 +71,21 @@ namespace WebApplication.Controllers
             }
         }
 
-        // GET: Jedi/Delete/5
+        // GET: Match/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Jedi/Delete/5
+        // POST: Match/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, JediContract jedi)
+        public ActionResult Delete(int id, MatchContract match)
         {
             ServiceClient webService = new ServiceClient();
 
             try
             {
-                webService.DelJedis(jedi);
+                webService.DelMatch(match);
 
                 return RedirectToAction("Index");
             }

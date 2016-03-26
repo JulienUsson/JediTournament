@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C16CC786-CE25-4110-98CE-813B6FD1DC7C}</ProjectGuid>
+    <ProjectGuid>{8C540AC0-7C2B-4650-998E-FDA08FF3DB3A}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -22,6 +22,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <ApplicationInsightsResourceId>/subscriptions/7d7c3d0c-f0af-4993-bad1-7b8eda139421/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/WebService</ApplicationInsightsResourceId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -91,17 +92,30 @@
   <ItemGroup>
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
-    <Content Include="JediService.svc" />
+    <Content Include="Service.svc">
+      <BrowseToURL>~/Service.svc</BrowseToURL>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapter\JediAdapter.cs" />
+    <Compile Include="Adapter\JoueurAdapter.cs" />
+    <Compile Include="Adapter\MatchAdapter.cs" />
+    <Compile Include="Adapter\StadeAdapter.cs" />
+    <Compile Include="Adapter\TournoiAdapter.cs" />
+    <Compile Include="Adapter\UtilisateurAdapter.cs" />
     <Compile Include="Contract\EntityContract.cs" />
+    <Compile Include="Contract\EPhaseTournoiContract.cs" />
     <Compile Include="Contract\JediContract.cs" />
-    <Compile Include="JediService.svc.cs">
-      <DependentUpon>JediService.svc</DependentUpon>
+    <Compile Include="Contract\JoueurContract.cs" />
+    <Compile Include="Contract\MatchContract.cs" />
+    <Compile Include="Contract\StadeContract.cs" />
+    <Compile Include="Contract\TournoiContract.cs" />
+    <Compile Include="Contract\UtilisateurContract.cs" />
+    <Compile Include="Service.svc.cs">
+      <DependentUpon>Service.svc</DependentUpon>
     </Compile>
-    <Compile Include="IJediService.cs" />
+    <Compile Include="IService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +126,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Service References\Application Insights\ConnectedService.json" />
     <None Include="Properties\PublishProfiles\JediTournamentWebService.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -119,6 +134,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
@@ -143,7 +161,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52189</DevelopmentServerPort>
+          <DevelopmentServerPort>53378</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:51418/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
