@@ -9,7 +9,7 @@
     <tr>
         <td>Id</td>
         <td>Nom</td>
-        <td>Matchs</td>
+        <td> Nombre de Matchs</td>
     </tr>
     @foreach (var tournoi in ViewBag.Tournois)
     {
@@ -19,10 +19,11 @@
             <td>
                 @if(tournoi.Matchs!=null)
                 {
-                    foreach (var match in tournoi.Matchs)
-                    {
-                        @match.Nom
-                    }
+                    @tournoi.Matchs.Length;
+                }
+                else
+                {
+                    <span>0</span>
                 }
             </td>
         </tr>

@@ -26,6 +26,11 @@ namespace BusinessLayer
             return DalManager.Instance.GetJedis();
         }
 
+        public Jedi GetJedi(int id)
+        {
+            return DalManager.Instance.GetJedi(id);
+        }
+
         public IEnumerable<Match> GetMatchs()
         {
             return DalManager.Instance.GetMatchs();

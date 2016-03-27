@@ -311,10 +311,10 @@ namespace WebApplication.WebService {
     public enum EPhaseTournoiContract : int {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        QuartFinale = 0,
+        HuitiemeFinale = 0,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        HuitiemeFinale = 1,
+        QuartFinale = 1,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         DemiFinale = 2,
@@ -332,6 +332,12 @@ namespace WebApplication.WebService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetJedis", ReplyAction="http://tempuri.org/IService/GetJedisResponse")]
         System.Threading.Tasks.Task<WebApplication.WebService.JediContract[]> GetJedisAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetJedi", ReplyAction="http://tempuri.org/IService/GetJediResponse")]
+        WebApplication.WebService.JediContract GetJedi(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetJedi", ReplyAction="http://tempuri.org/IService/GetJediResponse")]
+        System.Threading.Tasks.Task<WebApplication.WebService.JediContract> GetJediAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddJedis", ReplyAction="http://tempuri.org/IService/AddJedisResponse")]
         WebApplication.WebService.JediContract AddJedis(WebApplication.WebService.JediContract jedi);
@@ -475,6 +481,14 @@ namespace WebApplication.WebService {
         
         public System.Threading.Tasks.Task<WebApplication.WebService.JediContract[]> GetJedisAsync() {
             return base.Channel.GetJedisAsync();
+        }
+        
+        public WebApplication.WebService.JediContract GetJedi(int id) {
+            return base.Channel.GetJedi(id);
+        }
+        
+        public System.Threading.Tasks.Task<WebApplication.WebService.JediContract> GetJediAsync(int id) {
+            return base.Channel.GetJediAsync(id);
         }
         
         public WebApplication.WebService.JediContract AddJedis(WebApplication.WebService.JediContract jedi) {

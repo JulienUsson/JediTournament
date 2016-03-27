@@ -17,6 +17,9 @@ namespace WebService
         List<JediContract> GetJedis();
 
         [OperationContract]
+        JediContract GetJedi(int id);
+
+        [OperationContract]
         JediContract AddJedis(JediContract jedi);
 
         [OperationContract]

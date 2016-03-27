@@ -33,11 +33,12 @@ namespace WebApplication.Controllers
 
         // POST: Game/Result
         [HttpPost]
-        public ActionResult Result(string Tournois)
+        public ActionResult Result(string Tournoi, string Jedis)
         {
             ServiceClient webService = new ServiceClient();
             Random rdm = new Random();
-            ViewBag.Tournoi = webService.GetTournoi(int.Parse(Tournois));
+            ViewBag.Tournoi = webService.GetTournoi(int.Parse(Tournoi));
+            ViewBag.Jedi = webService.GetJedi(int.Parse(Jedis));
             ViewBag.HasWin = (rdm.Next(2)==1);
             webService.Close();
             return View();

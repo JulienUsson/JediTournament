@@ -5,12 +5,13 @@
 
 <h2>@ViewBag.Title</h2>
 
-<p>Tournoi : @ViewBag.Tournoi.Nom</p>
+<p>Tournoi  : @ViewBag.Tournoi.Nom<br/>
+   Jedi     : @ViewBag.Jedi.Nom</p>
 @if(ViewBag.HasWin)
 {
-    <p class="text-success">Gagné !</p>
+    <p class="h1 text-success">Gagné !</p>
 } else
 {
-    <p class="text-danger">Perdu !</p>
+    <p class="h1 text-danger">Perdu !</p>
 }
 

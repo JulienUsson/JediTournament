@@ -79,8 +79,8 @@
   <xs:element name="MatchContract" nillable="true" type="tns:MatchContract" />
   <xs:simpleType name="EPhaseTournoiContract">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="QuartFinale" />
       <xs:enumeration value="HuitiemeFinale" />
+      <xs:enumeration value="QuartFinale" />
       <xs:enumeration value="DemiFinale" />
       <xs:enumeration value="Finale" />
     </xs:restriction>

@@ -16,9 +16,9 @@ namespace JediTournamentConsole
             do {
                 Console.Clear();
                 Console.WriteLine("1 - Afficher la liste des stades");
-                Console.WriteLine("2 - Afficher la liste des Jedis qui sont du côté obscur");
-                Console.WriteLine("3 - Afficher la liste des Jedi qui ont plus de 3 points de forces et plus de 50 points de vies.");
-                Console.WriteLine("4 - Afficher la liste des matchs qui ont eu lieu dans un stade de plus de 200 places et ou deux Siths se sont affrontés.");
+                Console.WriteLine("2 - Afficher la liste des Jedis");
+                Console.WriteLine("3 - Afficher la liste des Tournois");
+                Console.WriteLine("4 - Afficher la liste des matchs");
                 Console.WriteLine("5 - Quitter");
                 key = Console.ReadLine();
                 Console.Clear();
@@ -32,16 +32,16 @@ namespace JediTournamentConsole
                         Console.ReadKey();
                         break;
                     case "2":
-                        foreach (var jedi in tm.GetSiths())
+                        foreach (var jedi in tm.GetJedis())
                         {
                             Console.WriteLine(jedi);
                         }
                         Console.ReadKey();
                         break;
                     case "3":
-                        foreach (var jedi in tm.GetJedis())
+                        foreach (var tournoi in tm.GetTournois())
                         {
-                            Console.WriteLine(jedi);
+                            Console.WriteLine(tournoi);
                         }
                         Console.ReadKey();
                         break;

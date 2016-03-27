@@ -34,6 +34,11 @@ namespace DataAccessLayer
             return _DataAccess.GetJedis();
         }
 
+        public Jedi GetJedi(int id)
+        {
+            return _DataAccess.GetJedi(id);
+        }
+
         public List<Match> GetMatchs()
         {
             return _DataAccess.GetMatchs();

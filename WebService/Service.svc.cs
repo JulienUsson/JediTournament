@@ -45,6 +45,11 @@ namespace WebService
             return jedis;
         }
 
+        public JediContract GetJedi(int id)
+        {
+            return JediAdapter.JediToJediContract(jtm.GetJedi(id));
+        }
+
         public void UpdateJedis(JediContract jedi)
         {
             jtm.UpdateJedi(JediAdapter.JediContractToJedi(jedi));
