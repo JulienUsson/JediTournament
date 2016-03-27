@@ -49,6 +49,11 @@ namespace DataAccessLayer
             return _DataAccess.GetTournois();
         }
 
+        public Tournoi GetTournoi(int id)
+        {
+            return _DataAccess.GetTournoi(id);
+        }
+
         public void AddJedi(Jedi jedi)
         {
             _DataAccess.AddJedi(jedi);

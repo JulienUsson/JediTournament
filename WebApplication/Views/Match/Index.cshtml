@@ -10,14 +10,14 @@
         <td>Id</td>
         <td>Jedi 1</td>
         <td>Jedi 2</td>
-        <td>Stade</td>
         <td>Vainqueur</td>
+        <td>Stade</td>
     </tr>
     @foreach (var match in ViewBag.Matchs)
     {
         <tr>
             <td>@match.ID</td>
-            <td class="<%= (match.Jedi1==match.Vainqueur.Id)?"Active":""; %>">@match.Jedi1.Nom</td>
+            <td>@match.Jedi1.Nom</td>
             <td>@match.Jedi2.Nom</td>
             <td>@match.Vainqueur.Nom</td>
             <td>@match.Stade.Planete</td>

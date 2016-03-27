@@ -61,6 +61,12 @@
   <wsdl:message name="IService_GetTournois_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetTournoisResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_GetTournoi_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTournoi" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetTournoi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTournoiResponse" />
+  </wsdl:message>
   <wsdl:message name="IService_AddTournoi_InputMessage">
     <wsdl:part name="parameters" element="tns:AddTournoi" />
   </wsdl:message>
@@ -151,6 +157,10 @@
     <wsdl:operation name="GetTournois">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/GetTournois" message="tns:IService_GetTournois_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/GetTournoisResponse" message="tns:IService_GetTournois_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTournoi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetTournoi" message="tns:IService_GetTournoi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetTournoiResponse" message="tns:IService_GetTournoi_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddTournoi">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/AddTournoi" message="tns:IService_AddTournoi_InputMessage" />
@@ -265,6 +275,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetTournois">
       <soap:operation soapAction="http://tempuri.org/IService/GetTournois" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTournoi">
+      <soap:operation soapAction="http://tempuri.org/IService/GetTournoi" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

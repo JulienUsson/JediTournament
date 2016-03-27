@@ -126,6 +126,11 @@ namespace WebService
             return tournois;
         }
 
+        public TournoiContract GetTournoi(int id)
+        {
+            return TournoiAdapter.TournoiToTournoiContract(jtm.GetTournoi(id));
+        }
+
         public void UpdateTournoi(TournoiContract tournoi)
         {
             jtm.UpdateTournoi(TournoiAdapter.TournoiContractToTournoi(tournoi));

@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Resultat";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>Tournoi : @ViewBag.Tournoi.Nom</p>
+@if(ViewBag.HasWin)
+{
+    <p class="text-success">Gagné !</p>
+} else
+{
+    <p class="text-danger">Perdu !</p>
+}
+

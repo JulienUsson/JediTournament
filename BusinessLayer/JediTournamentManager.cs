@@ -91,10 +91,14 @@ namespace BusinessLayer
             DalManager.Instance.DeleteTournoi(tournoi);
         }
 
-        //public IEnumerable<Tournoi> GetTournois()
-        public IEnumerable<Tournoi> GetTournois() // Quand tu ajoute la BBD pour les tournois décommente tes lignes et change mes "ObservableCollection" par le bon type stp
+        public IEnumerable<Tournoi> GetTournois()
         {
             return DalManager.Instance.GetTournois();
+        }
+
+        public Tournoi GetTournoi(int id) 
+        {
+            return DalManager.Instance.GetTournoi(id);
         }
     }
 }

@@ -41,6 +41,9 @@ namespace WebService
         List<TournoiContract> GetTournois();
 
         [OperationContract]
+        TournoiContract GetTournoi(int id);
+
+        [OperationContract]
         TournoiContract AddTournoi(TournoiContract tournoi);
 
         [OperationContract]

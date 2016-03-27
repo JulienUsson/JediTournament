@@ -381,6 +381,12 @@ namespace WebApplication.WebService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetTournois", ReplyAction="http://tempuri.org/IService/GetTournoisResponse")]
         System.Threading.Tasks.Task<WebApplication.WebService.TournoiContract[]> GetTournoisAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetTournoi", ReplyAction="http://tempuri.org/IService/GetTournoiResponse")]
+        WebApplication.WebService.TournoiContract GetTournoi(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetTournoi", ReplyAction="http://tempuri.org/IService/GetTournoiResponse")]
+        System.Threading.Tasks.Task<WebApplication.WebService.TournoiContract> GetTournoiAsync(int id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddTournoi", ReplyAction="http://tempuri.org/IService/AddTournoiResponse")]
         WebApplication.WebService.TournoiContract AddTournoi(WebApplication.WebService.TournoiContract tournoi);
         
@@ -533,6 +539,14 @@ namespace WebApplication.WebService {
         
         public System.Threading.Tasks.Task<WebApplication.WebService.TournoiContract[]> GetTournoisAsync() {
             return base.Channel.GetTournoisAsync();
+        }
+        
+        public WebApplication.WebService.TournoiContract GetTournoi(int id) {
+            return base.Channel.GetTournoi(id);
+        }
+        
+        public System.Threading.Tasks.Task<WebApplication.WebService.TournoiContract> GetTournoiAsync(int id) {
+            return base.Channel.GetTournoiAsync(id);
         }
         
         public WebApplication.WebService.TournoiContract AddTournoi(WebApplication.WebService.TournoiContract tournoi) {

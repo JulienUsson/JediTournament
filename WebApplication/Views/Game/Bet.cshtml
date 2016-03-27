@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Parie";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<form class="form-horizontal" method="post" action="/Game/Result">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Tournoi</label>
+        <div class="col-sm-10">
+            <p class="form-control-static">@ViewBag.Tournoi.Nom</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="jedi" class="col-sm-2 control-label">Jedi</label>
+        <div class="col-sm-10">
+            @Html.DropDownList("Jedis", null, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="col-sm-offset-2">
+        <button class="btn btn-default center-block" type="submit">Lancer le tournoi !</button>
+    </div>
+</form>
+

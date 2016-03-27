@@ -8,8 +8,8 @@ namespace JediTournamentEntities
 {
     public enum EPhaseTournoi
     {
-        QuartFinale,
         HuitiemeFinale,
+        QuartFinale,
         DemiFinale,
         Finale
     }

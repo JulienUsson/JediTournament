@@ -10,9 +10,9 @@ namespace WebService.Contract
     public enum EPhaseTournoiContract
     {
         [EnumMember]
-        QuartFinale,
-        [EnumMember]
         HuitiemeFinale,
+        [EnumMember]
+        QuartFinale,
         [EnumMember]
         DemiFinale,
         [EnumMember]

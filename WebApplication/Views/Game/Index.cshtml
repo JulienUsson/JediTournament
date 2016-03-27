@@ -3,3 +3,16 @@
     ViewBag.Title = "Jouer";
 }
 
+<h2>@ViewBag.Title</h2>
+
+<form class="form-horizontal" method="post" action="/Game/Bet">
+    <div class="form-group">
+        <label for="tournoi" class="col-sm-2 control-label">Tournoi</label>
+        <div class="col-sm-10">
+            @Html.DropDownList("Tournois", null, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="col-sm-offset-2">
+        <button class="btn btn-default center-block" type="submit">Parier</button>
+    </div>
+</form>
